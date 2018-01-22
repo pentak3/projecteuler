@@ -54,20 +54,20 @@ function isPermutation(n1, n2) {
 
 
 function findSmallestPermutedMultiples() {
-	var i = 10;
-	var j = 2;
+	var num = 10;
+	var x = 2;
 	var found = true;
 	while(true) {
 		found = true;
-		j = 2;
-		while(found && j<=6) {
-			found = found && isPermutation(i, i*j);
-			j += 1;
+		x = 2;
+		while(found && x<=6) {
+			found = found && isPermutation(num, num*x);
+			x += 1;
 		}
 		if (found) {
-			return i;
+			return num;
 		} else {
-			i += 1;
+			num += 1;
 		}
 	}
 }
