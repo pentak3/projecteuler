@@ -61,4 +61,6 @@ function findPentagonalNumbers() {
 	}
 }
 
+console.time('time');
 console.log(findPentagonalNumbers());
+console.timeEnd('time');

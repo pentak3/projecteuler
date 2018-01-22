@@ -31,7 +31,12 @@ So for each elem, i can find the min/cheaper route.
 */
 
 var fs = require('fs');
-var file = fs.readFileSync('./p081_matrix.txt').toString();
+try {
+	var file = fs.readFileSync('./p081_matrix.txt').toString();
+} catch(e) {
+	return console.log(e.message);
+}
+
 var lines = file.split('\n');
 var matrix = [];
 lines.forEach(function(line){
@@ -72,5 +77,6 @@ function findMinPathSum(matrix) {
 	return matrix[0][0];
 }
 
-
+console.time('time');
 console.log(findMinPathSum(matrix));
+console.timeEnd('time');

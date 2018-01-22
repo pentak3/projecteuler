@@ -72,4 +72,6 @@ function findSmallestPermutedMultiples() {
 	}
 }
 
+console.time('time');
 console.log(findSmallestPermutedMultiples());
+console.timeEnd('time');
